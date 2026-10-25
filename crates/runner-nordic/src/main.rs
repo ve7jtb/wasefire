@@ -41,7 +41,6 @@ use nrf52840_hal::clocks::{self, ExternalOscillator, Internal, LfOscStopped};
 use nrf52840_hal::gpio::{self, Level, Output, Pin, PushPull};
 use nrf52840_hal::gpiote::Gpiote;
 use nrf52840_hal::pac::{Interrupt, interrupt};
-use nrf52840_hal::rng::Rng;
 use nrf52840_hal::usbd::{UsbPeripheral, Usbd};
 #[cfg(feature = "release")]
 use panic_abort as _;
@@ -73,6 +72,7 @@ use crate::board::button::{Button, Channels};
 use crate::board::clock::Clock;
 #[cfg(feature = "gpio")]
 use crate::board::gpio::Gpio;
+use crate::board::rng::Drbg;
 use crate::board::timer::Timers;
 #[cfg(feature = "uart")]
 use crate::board::uart::Uarts;
@@ -116,7 +116,7 @@ struct State {
     #[cfg(feature = "gpio")]
     gpios: [Gpio; <board::gpio::Impl as Support<usize>>::SUPPORT],
     leds: [Pin<Output<PushPull>>; <led::Impl as Support<usize>>::SUPPORT],
-    rng: Rng,
+    rng: Drbg,
     storage: Option<Storage>,
     #[cfg(feature = "uart")]
     uarts: Uarts,
@@ -137,6 +137,21 @@ fn main() -> ! {
     static mut USB_BUS: MaybeUninit<UsbBusAllocator<Usb>> = MaybeUninit::uninit();
 
     allocator::init();
+    unsafe {
+        const UICR_APPROTECT: *mut u32 = 0x1000_1208 as *mut u32;
+        const NVMC_READY: *const u32 = 0x4001_E400 as *const u32;
+        const NVMC_CONFIG: *mut u32 = 0x4001_E504 as *mut u32;
+        const APPROTECT_DISABLE: *mut u32 = 0x4000_0558 as *mut u32;
+        if core::ptr::read_volatile(UICR_APPROTECT) != 0x0000_005a {
+            core::ptr::write_volatile(NVMC_CONFIG, 1);
+            while core::ptr::read_volatile(NVMC_READY) == 0 {}
+            core::ptr::write_volatile(UICR_APPROTECT, 0x0000_005a);
+            while core::ptr::read_volatile(NVMC_READY) == 0 {}
+            core::ptr::write_volatile(NVMC_CONFIG, 0);
+            while core::ptr::read_volatile(NVMC_READY) == 0 {}
+        }
+        core::ptr::write_volatile(APPROTECT_DISABLE, 0x0000_005a);
+    }
     #[cfg(feature = "debug")]
     let c = nrf52840_hal::pac::CorePeripherals::take().unwrap();
     #[cfg(feature = "debug")]
@@ -237,7 +252,7 @@ fn main() -> ! {
         let radio = BleRadio::new(p.RADIO, &p.FICR, ble_tx, ble_rx);
         Ble::new(radio, p.TIMER0)
     };
-    let rng = Rng::new(p.RNG);
+    let rng = Drbg::new(p.RNG);
     #[cfg(feature = "aes128-ccm")]
     let ccm = Ccm::init(p.CCM, p.AAR, DataRate::_1Mbit);
     storage::init(p.NVMC);
@@ -382,7 +397,16 @@ fn usbd() {
             state.serial.port(),
         ];
         #[cfg_attr(not(feature = "usb-serial"), allow(unused_variables))]
-        let polled = state.usb_dev.poll(&mut classes);
+        let mut polled = state.usb_dev.poll(&mut classes);
+        if state.usb_dev.state() == UsbDeviceState::Suspend {
+            polled |= state.usb_dev.poll(&mut classes);
+        }
+        unsafe {
+            const USBD_LOWPOWER: *mut u32 = 0x4002_7528 as *mut u32;
+            if core::ptr::read_volatile(USBD_LOWPOWER) != 0 {
+                core::ptr::write_volatile(USBD_LOWPOWER, 0);
+            }
+        }
         if state.usb_dev.state() != UsbDeviceState::Configured {
             return;
         }

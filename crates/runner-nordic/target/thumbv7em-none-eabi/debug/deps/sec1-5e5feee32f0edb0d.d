@@ -1,0 +1,11 @@
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/deps/sec1-5e5feee32f0edb0d.d: /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/lib.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/point.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/error.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/parameters.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/private_key.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/traits.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/../README.md
+
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/deps/libsec1-5e5feee32f0edb0d.rmeta: /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/lib.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/point.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/error.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/parameters.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/private_key.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/traits.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/../README.md
+
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/lib.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/point.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/error.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/parameters.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/private_key.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/traits.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/../README.md:

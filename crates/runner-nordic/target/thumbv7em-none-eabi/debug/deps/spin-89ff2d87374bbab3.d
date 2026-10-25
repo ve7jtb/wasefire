@@ -1,0 +1,10 @@
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/deps/spin-89ff2d87374bbab3.d: /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/lib.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/lazylock.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/mutex.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/mutex/spin.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/once.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/relax.rs
+
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/deps/libspin-89ff2d87374bbab3.rmeta: /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/lib.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/lazylock.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/mutex.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/mutex/spin.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/once.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/relax.rs
+
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/lib.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/lazylock.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/mutex.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/mutex/spin.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/once.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spin-0.12.0/src/relax.rs:

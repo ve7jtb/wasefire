@@ -118,9 +118,11 @@ impl<T: HasHid> Api for WithHid<T> {
     fn read(output: &mut [u8; 64]) -> Result<bool, Error> {
         T::with_hid(|x| match x.class.pull_raw_output(output) {
             Ok(64) => Ok(true),
+            Ok(0) => Ok(false),
             Ok(len) => {
-                log::warn!("bad read len {}", len);
-                Err(Error::world(Code::InvalidLength))
+                log::warn!("short read len {}, zero-padding report", len);
+                output[len..].fill(0);
+                Ok(true)
             }
             Err(UsbError::WouldBlock) => Ok(false),
             Err(_) => Err(Error::world(0)),

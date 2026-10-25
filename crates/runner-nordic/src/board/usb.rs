@@ -40,9 +40,21 @@ impl Api for Impl {
     type Serial = WithSerial<Impl>;
 }
 
+fn ensure_usbd_awake() {
+    unsafe {
+        const USBD_LOWPOWER: *mut u32 = 0x4002_7528 as *mut u32;
+        if core::ptr::read_volatile(USBD_LOWPOWER) != 0 {
+            core::ptr::write_volatile(USBD_LOWPOWER, 0);
+        }
+    }
+}
+
 impl HasRpc<'static, Usb> for Impl {
     fn with_rpc<R>(f: impl FnOnce(&mut Rpc<'static, Usb>) -> R) -> R {
-        with_state(|state| f(&mut state.protocol))
+        with_state(|state| {
+            ensure_usbd_awake();
+            f(&mut state.protocol)
+        })
     }
 
     #[cfg(not(feature = "test-vendor"))]
@@ -121,7 +133,10 @@ impl HasHid for Impl {
     type UsbBus = Usb;
 
     fn with_hid<R>(f: impl FnOnce(&mut Ctap<Self::UsbBus>) -> R) -> R {
-        with_state(|state| f(&mut state.ctap))
+        with_state(|state| {
+            ensure_usbd_awake();
+            f(&mut state.ctap)
+        })
     }
 }
 

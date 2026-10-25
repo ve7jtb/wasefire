@@ -552,6 +552,15 @@ impl AppletOptions {
         for features in &self.features {
             action.cargo.push(format!("--features={features}"));
         }
+        action.cargo.push("--config=profile.release.package.ml-dsa.opt-level=3".to_string());
+        action.cargo.push("--config=profile.release.package.module-lattice.opt-level=3".to_string());
+        action.cargo.push("--config=profile.release.package.shake.opt-level=3".to_string());
+        action.cargo.push("--config=profile.release.package.crypto-bigint.opt-level=3".to_string());
+        action.cargo.push("--config=profile.release.package.fn-dsa.opt-level=3".to_string());
+        action.cargo.push("--config=profile.release.package.fn-dsa-comm.opt-level=3".to_string());
+        action.cargo.push("--config=profile.release.package.fn-dsa-kgen.opt-level=3".to_string());
+        action.cargo.push("--config=profile.release.package.fn-dsa-sign.opt-level=3".to_string());
+        action.cargo.push("--config=profile.release.package.fn-dsa-vrfy.opt-level=3".to_string());
         action.run().await?;
         if !main.size && main.footprint.is_none() {
             return Ok(());
@@ -717,15 +726,15 @@ impl RunnerOptions {
                 cargo.env("RISCV_MTVEC_ALIGN", "256");
             }
             rustflags.push("-C link-arg=-Tlink.x".to_string());
+            cargo.arg("-Zbuild-std=core,alloc");
+            // TODO(https://github.com/rust-lang/rust/issues/122105): Remove when fixed.
+            rustflags.push("--allow=unused-crate-dependencies".to_string());
+            if self.opt_level.is_some_and(action::OptLevel::optimize_for_size) {
+                cargo.arg("-Zbuild-std-features=optimize_for_size");
+            }
+            cargo.arg("--config=profile.release.codegen-units=1");
+            cargo.arg("--config=profile.release.lto=true");
             if main.release {
-                cargo.arg("-Zbuild-std=core,alloc");
-                // TODO(https://github.com/rust-lang/rust/issues/122105): Remove when fixed.
-                rustflags.push("--allow=unused-crate-dependencies".to_string());
-                if self.opt_level.is_some_and(action::OptLevel::optimize_for_size) {
-                    cargo.arg("-Zbuild-std-features=optimize_for_size");
-                }
-                cargo.arg("--config=profile.release.codegen-units=1");
-                cargo.arg("--config=profile.release.lto=true");
                 cargo.arg("--config=profile.release.panic=\"immediate-abort\"");
             } else {
                 cargo.arg("--config=profile.release.debug=2");
@@ -748,6 +757,15 @@ impl RunnerOptions {
         }
         if main.is_native() {
             features.push("native".to_string());
+            cargo.arg("--config=profile.release.package.ml-dsa.opt-level=3");
+            cargo.arg("--config=profile.release.package.module-lattice.opt-level=3");
+            cargo.arg("--config=profile.release.package.shake.opt-level=3");
+            cargo.arg("--config=profile.release.package.crypto-bigint.opt-level=3");
+            cargo.arg("--config=profile.release.package.fn-dsa.opt-level=3");
+            cargo.arg("--config=profile.release.package.fn-dsa-comm.opt-level=3");
+            cargo.arg("--config=profile.release.package.fn-dsa-kgen.opt-level=3");
+            cargo.arg("--config=profile.release.package.fn-dsa-sign.opt-level=3");
+            cargo.arg("--config=profile.release.package.fn-dsa-vrfy.opt-level=3");
         } else if main.pulley {
             features.push("pulley".to_string());
             cargo.arg("--config=profile.release.package.wasmtime.opt-level=\"z\"");

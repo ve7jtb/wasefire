@@ -1,0 +1,9 @@
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/deps/wasefire_protocol-1c45f9a7ce15f09c.d: /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/lib.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/applet.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/common.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/platform.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/transfer.rs
+
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/deps/libwasefire_protocol-1c45f9a7ce15f09c.rmeta: /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/lib.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/applet.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/common.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/platform.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/transfer.rs
+
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/lib.rs:
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/applet.rs:
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/common.rs:
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/platform.rs:
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/protocol/src/transfer.rs:

@@ -1,0 +1,10 @@
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/deps/wasefire_store-c5c55b99dc961fb7.d: /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/lib.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/format.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/format/bitfield.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/fragment.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/storage.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/store.rs
+
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/deps/libwasefire_store-c5c55b99dc961fb7.rmeta: /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/lib.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/format.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/format/bitfield.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/fragment.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/storage.rs /Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/store.rs
+
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/lib.rs:
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/format.rs:
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/format/bitfield.rs:
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/fragment.rs:
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/storage.rs:
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/store/src/store.rs:

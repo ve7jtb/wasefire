@@ -7,7 +7,7 @@ _rlimit = 0x20040000;
 
 /* FLASH */
 /* Keep in sync with the bootloader and header library. */
-_platform = 0x00008000; /* A and B 288KiB each */
-_applet   = 0x00098000; /* 264KiB */
+_platform = 0x00008000; /* A and B 416KiB each (832KiB single-sided) */
+_applet   = 0x000d8000; /* 8KiB */
 _store    = 0x000da000; /* 24KiB */
 _limit    = 0x000e0000;

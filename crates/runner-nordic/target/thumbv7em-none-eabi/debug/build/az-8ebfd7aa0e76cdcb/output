@@ -1,0 +1,6 @@
+$ mkdir -p "/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/build/az-8ebfd7aa0e76cdcb/out/try_track_caller"
+$ cd "/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/build/az-8ebfd7aa0e76cdcb/out/try_track_caller"
+$ printf '%s' "// try_tra"... > "/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/build/az-8ebfd7aa0e76cdcb/out/try_track_caller/try_track_caller.rs"
+$ cd "/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/build/az-8ebfd7aa0e76cdcb/out/try_track_caller" && "/Users/jbradley/.rustup/toolchains/nightly-2026-06-03-aarch64-apple-darwin/bin/rustc" "try_track_caller.rs" "--emit=dep-info,metadata" >& /dev/null
+cargo:rustc-cfg=track_caller
+$ rm -r "/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/build/az-8ebfd7aa0e76cdcb/out/try_track_caller"

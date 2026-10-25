@@ -29,7 +29,7 @@ pub mod fpc2534;
 pub mod gpio;
 pub mod led;
 pub mod platform;
-mod rng;
+pub mod rng;
 pub mod timer;
 #[cfg(feature = "uart")]
 pub mod uart;

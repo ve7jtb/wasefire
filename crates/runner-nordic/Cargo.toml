@@ -77,6 +77,7 @@ usb-serial = ["_usb", "dep:usbd-serial", "wasefire-scheduler/board-api-usb-seria
 # Software crypto features.
 software-crypto-aes256-cbc = ["_crypto", "wasefire-scheduler/software-crypto-aes256-cbc"]
 software-crypto-aes256-gcm = ["_crypto", "wasefire-scheduler/software-crypto-aes256-gcm"]
+software-crypto-ed25519 = ["_crypto", "wasefire-scheduler/software-crypto-ed25519"]
 software-crypto-hmac-sha256 = [
   "software-crypto-sha256",
   "wasefire-scheduler/software-crypto-hmac-sha256",
@@ -123,6 +124,7 @@ _gpio_port1 = []
 _software-crypto = [
   "software-crypto-aes256-cbc",
   "software-crypto-aes256-gcm",
+  "software-crypto-ed25519",
   "software-crypto-hmac-sha256",
   "software-crypto-p256",
   "software-crypto-p256-ecdh",

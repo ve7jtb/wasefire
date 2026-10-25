@@ -26,6 +26,8 @@ impl crypto::Api for Impl {
     type Aes256Cbc = crypto::SoftwareAes256Cbc;
     #[cfg(feature = "software-crypto-aes256-gcm")]
     type Aes256Gcm = crypto::SoftwareAes256Gcm;
+    #[cfg(feature = "software-crypto-ed25519")]
+    type Ed25519 = crypto::SoftwareEd25519<crypto::CryptoRng<crate::Board>>;
     #[cfg(feature = "software-crypto-hmac-sha256")]
     type HmacSha256 = crypto::SoftwareHmacSha256<Self>;
     #[cfg(feature = "software-crypto-p256")]

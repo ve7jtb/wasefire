@@ -102,12 +102,12 @@ const HEADER_LEN: u32 = 0x00000100;
 #[cfg(feature = "board-devkit")]
 const FIRMWARE_A: u32 = 0x00010000;
 #[cfg(feature = "board-devkit")]
-const FIRMWARE_B: u32 = 0x00064000;
+const FIRMWARE_B: u32 = 0x00084000;
 
 #[cfg(feature = "board-dongle")]
 const FIRMWARE_A: u32 = 0x00008000;
 #[cfg(feature = "board-dongle")]
-const FIRMWARE_B: u32 = 0x00050000;
+const FIRMWARE_B: u32 = 0x00070000;
 
 #[cfg(feature = "board-dongle")]
 pub const STORE_RANGE: core::ops::Range<u32> = 0x000da000 .. 0x000e0000;

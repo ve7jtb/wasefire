@@ -1,0 +1,10 @@
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/deps/base16ct-34165b3b31e2a5e9.d: /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/lib.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/lower.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/mixed.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/upper.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/display.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/error.rs
+
+/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/crates/runner-nordic/target/thumbv7em-none-eabi/debug/deps/libbase16ct-34165b3b31e2a5e9.rmeta: /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/lib.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/lower.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/mixed.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/upper.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/display.rs /Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/error.rs
+
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/lib.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/lower.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/mixed.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/upper.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/display.rs:
+/Users/jbradley/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/base16ct-0.2.0/src/error.rs:

@@ -1,0 +1,3 @@
+cargo::rustc-link-search=/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/target/wasefire
+cargo::rustc-link-lib=applet
+cargo::rerun-if-changed=/Users/jbradley/.gemini/antigravity/scratch/OpenSK/third_party/wasefire/target/wasefire/libapplet.a
