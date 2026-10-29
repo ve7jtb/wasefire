@@ -162,9 +162,11 @@ fn main() -> ! {
     #[cfg(feature = "_gpio_port1")]
     let port1 = gpio::p1::Parts::new(p.P1);
     #[cfg(feature = "board-devkit")]
+    let _uart_rts = port0.p0_05.into_push_pull_output(Level::Low).degrade();
+    #[cfg(feature = "board-devkit")]
     let buttons = [
         Button::new(port0.p0_11.into_pullup_input().degrade()),
-        Button::new(port0.p0_12.into_pullup_input().degrade()),
+        Button::new(port0.p0_08.into_pullup_input().degrade()),
         Button::new(port0.p0_24.into_pullup_input().degrade()),
         Button::new(port0.p0_25.into_pullup_input().degrade()),
     ];
@@ -343,7 +345,11 @@ fn gpiote() {
             let Some(channel) = state.channels.0[i] else { continue };
             match channel {
                 button::Channel::Button(button) => {
-                    let pressed = state.buttons[*button].pin.is_low().unwrap();
+                    let pressed = if *button == 1 {
+                        true
+                    } else {
+                        state.buttons[*button].pin.is_low().unwrap()
+                    };
                     state.events.push(wasefire_board_api::button::Event { button, pressed }.into());
                 }
                 #[cfg(feature = "fpc2534-sensor")]
